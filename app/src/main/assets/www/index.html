@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Three Door</title>
-    <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
     <script>
         function choose_door(door) {
             document.getElementById('lb_res').innerHTML = door.value;
@@ -10,11 +10,11 @@
     </script>
 </head>
 <body>
-    <div>
-        <input type="button" id="bt_door1" name="door1" onClick="choose_door(this);" value="Door 1">
-        <input type="button" id="bt_door2" name="door2" onClick="choose_door(this);" value="Door 2">
-        <input type="button" id="bt_door3" name="door3" onClick="choose_door(this);" value="Door 3">
-    </div>
-    <label id="lb_res" name="lb_res">which door?</label>
+    <form method="post" action="./result.html">
+        <input type="submit" id="bt_door1" name="door1" onClick="choose_door(this);" value="Door 1">
+        <input type="submit" id="bt_door2" name="door2" onClick="choose_door(this);" value="Door 2">
+        <input type="submit" id="bt_door3" name="door3" onClick="choose_door(this);" value="Door 3">
+    </form>
+    <label id="lb_res">Which door?</label>
 </body>
 </html>
