@@ -47,3 +47,9 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function choose_door(door) {
+    var door_text = door.value;
+    document.getElementById('lb_res').innerHTML = door_text;
+
+}
