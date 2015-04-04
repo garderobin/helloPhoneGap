@@ -5,7 +5,8 @@
     <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
     <script>
         function choose_door(door) {
-            document.getElementById('lb_res').innerHTML = door.value;
+            sessionStorage.setItem("which_door", door.value);
+            self.location = 'result.html';
         }
     </script>
 </head>
@@ -15,6 +16,5 @@
         <input type="button" id="bt_door2" name="door2" onClick="choose_door(this);" value="Door 2">
         <input type="button" id="bt_door3" name="door3" onClick="choose_door(this);" value="Door 3">
     </div>
-    <label id="lb_res" name="lb_res">which door?</label>
 </body>
 </html>
